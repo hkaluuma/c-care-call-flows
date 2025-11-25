@@ -1,0 +1,61 @@
+{
+  "core": {
+    "log-level": "info",
+    "log-vxml": "false",
+    "audio-path": "",
+    "dates-audio-path": "https://idi-audio.s3-us-west-2.amazonaws.com/academy-ivr/dates",
+    "max-channels": "25",
+    "use-sip-trunks": "true",
+    "max-call-time-in-seconds": "600",
+    "secret-key": "WqkUE4O2lBZ#CXrAd!CU!ptvSX^HBVm3QmJOIPozEp#mDwm&Mn"
+  },
+  "routed-numbers": [
+
+         {"format": "25676", "peer": "airtel"},
+         {"format": "25674", "peer": "airtel"}
+    ],
+  "redis": {
+    "port": "6379",
+    "host": "127.0.0.1"
+  },
+  "database": {
+    "port": "3306",
+    "host": "ivr.cagz85g48hl7.us-west-2.rds.amazonaws.com",
+    "user": "admin",
+    "pass": "12345Uganda**",
+    "database": "ivr"
+  },
+  "asterisk-ami": {
+    "user": "ivr",
+    "pass": "1234",
+    "host": "127.0.0.1",
+    "port": "5038"
+  },
+  "asterisk-ari": {
+    "port": "8088",
+    "host": "127.0.0.1",
+    "user": "ivr",
+    "pass": "1234"
+  },
+  "sip-trunks": [
+
+          {"peer": "simbanet", "host": "sip.simbanet.co.ug", "max-channels": "10", "fixed-caller-id":  "false", "caller-id": "+256206300462"},
+          {"peer": "airtel", "host": "196.43.147.50", "max-channels": "10", "fixed-caller-id": "true", "caller-id": "+256200410499"},
+          {"peer": "simbanet-backup", "host": "154.66.219.22", "max-channels": "10", "fixed-caller-id":  "false", "caller-id": "+256206300462"}
+
+  ],
+  "email-server": {
+    "user": "academysupport@idi.co.ug",
+    "pass": "1234Uganda*",
+    "port": "587",
+    "host": "smtp.office365.com"
+  },
+  "email-recipients": {
+    "to": "jninsiima@idi.co.ug,ananungi@idi.co.ug",
+    "cc": "fmusinguzi@idi.co.ug,sntale@idi.co.ug,jbyenkya@idi.co.ug,hkaluuma@idi.co.ug,smagembe@idi.co.ug"
+  },
+  "roles": [
+    {"value": "admin", "text":  "Administrator"},
+    {"value": "user", "text": "Normal User"}
+  ]
+}
